@@ -1,0 +1,32 @@
+# ---- 构建产物（体积大，不进仓库） ----
+build/
+build_*/
+dist/
+dist_*/
+installer_out/
+.buildenv/
+.venv/
+venv/
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# ---- 内置 ffmpeg（单个 80~100MB，请按 bin/README.md 自行放置） ----
+bin/*
+!bin/README.md
+
+# ---- 编辑器 / 系统 ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- 本地临时文件 ----
+_*.txt
+_*.py
+!_*.gitkeep
+crash.log
