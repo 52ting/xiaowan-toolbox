@@ -9,10 +9,13 @@ Windows 上经典视频压缩工具「小丸工具箱」的重制版，**macOS /
 
 | 平台 | 怎么装 |
 | --- | --- |
-| **Windows** | 下载 [`小丸工具箱-1.2.4-安装程序.exe`](https://github.com/52ting/xiaowan-toolbox/releases/latest)（约 47 MB）双击安装。默认装到当前用户目录、**不需要管理员权限**，自动建开始菜单与桌面快捷方式，控制面板里能正常卸载。自带 ffmpeg，装完直接能用 |
+| **Windows** | 下载 [`XiaoWanToolbox-1.2.4-Setup.exe`](https://github.com/52ting/xiaowan-toolbox/releases/latest)（约 47 MB）双击安装。默认装到当前用户目录、**不需要管理员权限**，自动建开始菜单与桌面快捷方式，控制面板里能正常卸载。自带 ffmpeg，装完直接能用 |
 | **macOS** | 官方不提供现成 `.app`，需要在本机跑一次构建（约 2–5 分钟），见下方 [macOS 章节](#macos)。产出的 `.app` 自带 ffmpeg，可随意拷给别人 |
 
 全部版本与下载：<https://github.com/52ting/xiaowan-toolbox/releases>
+
+> 发布包用英文名（`XiaoWanToolbox-…`）是必须的：GitHub Release 会剥掉资产名里的
+> 非 ASCII 字符，中文名会被削成 `-1.2.4-.exe`。程序本身的界面、窗口标题全是中文。
 
 ## 功能
 
@@ -32,7 +35,7 @@ Windows 上经典视频压缩工具「小丸工具箱」的重制版，**macOS /
 
 ### 方式一：安装程序（推荐）
 
-下载 `小丸工具箱-1.2.4-安装程序.exe` 双击，按向导走完即可。
+下载 `XiaoWanToolbox-1.2.4-Setup.exe` 双击，按向导走完即可。
 不写注册表脏数据、不装服务，卸载就是删目录 + 删快捷方式。
 
 安装程序长这样（Inno Setup 打包）：
@@ -76,7 +79,7 @@ python packaging\build_windows.py --clean
 ISCC.exe packaging\xiaowan_setup.iss
 ```
 
-产物：`installer_out\小丸工具箱-1.2.4-安装程序.exe`。
+产物：`installer_out\XiaoWanToolbox-1.2.4-Setup.exe`。
 需要 [Inno Setup 6](https://jrsoftware.org/isdl.php)（用 winget 装也行：
 `winget install -e --id JRSoftware.InnoSetup`）。
 脚本会读取 `packaging\ChineseSimplified.isl`，中文界面对外可用，无需额外装语言包。

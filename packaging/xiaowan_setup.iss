@@ -59,7 +59,10 @@ ArchitecturesInstallIn64BitMode=x64compatible
 MinVersion=10.0
 
 OutputDir=..\installer_out
-OutputBaseFilename={#MyAppName}-{#MyAppVersion}-安装程序
+; 文件名用 ASCII：GitHub Release 会把资产名里的非 ASCII 字符直接删掉
+; （「小丸工具箱-1.2.4-安装程序.exe」会被削成「-1.2.4-.exe」），
+; 所以安装包、源码包统一用英文名，程序窗口标题仍是中文。
+OutputBaseFilename=XiaoWanToolbox-{#MyAppVersion}-Setup
 Compression=lzma2/max
 SolidCompression=yes
 WizardStyle=modern
